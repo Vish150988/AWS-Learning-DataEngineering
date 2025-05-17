@@ -1,1 +1,16 @@
+Amazon Redshift
 
+Fully managed data warehousing solution based on PostgreSQL
+Designed for OLAP.
+Supports distributed workloads.
+Stores data in columns instead of rows.
+You can use Redshift Query Editor for querying.
+
+The Console
+Redshift API
+You can query petabytes of data:
+Structured data
+Semi-structured data
+Runs within a VPC.
+Redshift supports Multi-AZ deployments.
+Offers a serverless option.
