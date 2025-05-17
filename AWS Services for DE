@@ -67,3 +67,8 @@ Event-Driven
 With event-driven triggers, you can configure AWS glue workflows to start automatically in response to events
 Events are things like data uploads to S3, changes in Amazon DynamoDB tables, or messages in Amazon Simple Notification Service (SNS) topics
 These can also come from an EventBridge
+Time Based 
+Time-based triggers allow you to schedule workflows at specific intervals or particular dates and times.
+The frequency can be hourly, daily, weekly, monthly, on chosen days, or a completely custom frequency that can be edited by Cron notations
+On-Demand
+This trigger option allows you to start your workflows based on a schedule or at any time on-demand.
