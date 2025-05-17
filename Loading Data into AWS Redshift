@@ -1,1 +1,58 @@
+Data Sources
+You can load data into Redshift from various AWS services including:
 
+Amazon S3
+AWS Kinesis
+EMR
+DynamoDB
+DMS
+RDS
+
+Two Main Ways to Load Data
+Option 1: Load via S3
+
+Have a Redshift cluster ready
+Split your files into multiple files (helps with parallel loading)
+Upload files to S3
+Create an IAM role with S3 read permissions
+Attach the role to your Redshift cluster
+Use the COPY command to load the data
+
+Option 2: Load Directly
+
+Load directly from source database to Redshift
+Skip the S3 step
+Less redundancy but faster
+
+Key Commands
+COPY Command
+
+Used to load data into Redshift
+Requires:
+
+Target table (where data goes in Redshift)
+Source location (where data comes from)
+IAM role (for permissions)
+
+
+
+UNLOAD Command
+
+Does the opposite - exports data from Redshift to S3
+Requires:
+
+Query (what data to export)
+Destination (where to send it in S3)
+IAM role (for permissions)
+Format specification (like PARQUET)
+
+
+
+VACUUM Command
+Used for maintenance:
+
+VACUUM FULL: Reclaims space completely but takes longer
+VACUUM SORT: Resorts rows in your table for better performance
+VACUUM REINDEX: Reclaims space and makes queries more effective
+
+These commands help keep your Redshift cluster running efficiently by managing space and organization of your data.RetryClaude can make mistakes. Please double-check responses.
