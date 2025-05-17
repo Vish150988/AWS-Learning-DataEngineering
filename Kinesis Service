@@ -1,1 +1,7 @@
+Amazon Kinesis: What is it?
 
+Kinesis
+1.Fully managed data streaming service that allows you process and analyze streaming data
+2.Kinesis is a family of services that consists of Data Streams, Data Firehose, Video Streams and Managed Apache Flink
+3.These services aid in the collection, delivery, and analytics of streaming data
+4.They are able to interact with AWS and third-party services with low effort
