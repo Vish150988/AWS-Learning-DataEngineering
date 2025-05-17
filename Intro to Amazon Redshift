@@ -14,13 +14,13 @@ Semi-structured data
 Runs within a VPC.
 Redshift supports Multi-AZ deployments.
 Offers a serverless option.
-
+***********************************************************************************************************************************
 Amazon Redshift
 Redshift allows you to collect data through traditional data warehouses
 Data Warehousing allows you to combine different data sources into a single place to run custom analytics
 Redshift also allows you to utilize log analysis
 Log analysis allows you to get insightful data on user behaviors like how many times they click and what sensors they use.
-
+*************************************************************************************************************************************
 Redshift Architecture:
 Single-Node Cluster
 Leader Node
@@ -46,3 +46,18 @@ Best suited for large datasets and production environments.
 
 Leader Node
 Compute Node    Compute Node
+***************************************************************************************************************************************
+
+Leader Node:
+
+Receives queries from client applications.
+Parses the queries and develops query execution plans.
+Coordinates parallel execution of these plans.
+Aggregates the results of the queries and returns them back to the client.
+
+Compute Node:
+
+Partitions the job into slices (slice management).
+Runs the query execution plans.
+Sends the intermediate results back to the leader node.
+
