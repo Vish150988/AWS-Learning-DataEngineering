@@ -19,4 +19,24 @@ b.Data Consumers
 A Producer is an application that ingests incoming data into a Stream in near real-time
 A Consumer is an application that takes that collected data and processes or stores it
 
+Architecture: Data Flow
+Data Producer → Kinesis → Data Consumer
+Data Producer:
+
+IoT devices
+Log/Event generators
+External applications
+Servers or container
+
+Kinesis:
+
+Data Stream
+Data Firehose
+
+Data Consumer:
+
+S3
+Redshift
+Third-party software
+
 
