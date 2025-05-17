@@ -37,3 +37,16 @@ AWS DataBrew is a visual data preparation tool that allows you to use programmin
 
 1.Allows for visual data preparations to explore and interact with your datasets
 2.Provides a wide range of built-in data transformation functions to apply datasets
+
+Glue Studio vs. Glue DataBrew
+Studio:
+
+a.Visual Tool to write ETL jobs
+b.Single pane to monitor all jobs
+c.Mainly focused on getting, transforming, and storing the data
+
+DataBrew:
+
+a.Visual Tool for data preparation
+b.Data profiling
+c.Mainly focused on utilizing the data to gain insights on trends in your data
