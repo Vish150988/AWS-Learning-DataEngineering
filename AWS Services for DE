@@ -8,4 +8,20 @@ AWS Glue :
 3. Allow you to gather your data, process it with an ETL, catalog it and send it to consumption services.
 4. Glue is able to interact with AWS , third party services with low effort.
 
+what you can accomplish with AWS Glue:
+1. Serverless way to use ETL (Extract , Transform & Load) data integration
+2. Allows for multiple data sources including S3, Dynamo DB & RDS
+3. Able to build ETL jobs utilizing different methods including python shell, Glue streaming and cloud Studio.
+4. There are four types of Data Processing Units (DPU)
+    a. G.1X (for memory-intense workloads)
+    b. G.2X (for Workload with ML Transforms)
+    c. G.025X (for low volume and sporadic data)
+    d. Standard (Not recommended on versions of Glue later the V1.0)
+
+AWS Glue Data Catalog:
+Data Catalog simplifies the management of metadata for your data assets.
+1. Allows you to create a Metadata Store for your data assets
+2. Active table definition including column names , Data types, and other attributes
+3. Automatically infer the schema of the database.
+
 
