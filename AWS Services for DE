@@ -3,4 +3,9 @@ AWS Data Engineering Services
 In this series you will learn about all AWS services related to Data Engineering.
 
 AWS Glue : 
-The service that consists of ETL jobs, Data Catalog, Glue Studio, Data Quality and Data Brew.
+1. Serverless solution for discovering , prepping & comibining data.
+2. The service that consists of ETL jobs, Data Catalog, Glue Studio, Data Quality and Data Brew.
+3. Allow you to gather your data, process it with an ETL, catalog it and send it to consumption services.
+4. Glue is able to interact with AWS , third party services with low effort.
+
+
