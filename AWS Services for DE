@@ -50,3 +50,14 @@ DataBrew:
 a.Visual Tool for data preparation
 b.Data profiling
 c.Mainly focused on utilizing the data to gain insights on trends in your data
+
+AWS Glues Use cases
+Allows you to complete ETL jobs
+Data Cataloging
+Unique view of data from different sources
+
+Benefits of AWS Glue
+Fully managed service
+Allows for the integration of large amounts of data to multiple services
+Allows you to consume process and buffer data in real time
+Allows for real-time metrics and reporting across various services
