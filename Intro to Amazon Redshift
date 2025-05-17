@@ -37,3 +37,12 @@ Compute node
 Single-Node Cluster
 Consists of one compute node.
 Best suited for small datasets and testing purposes.
+
+
+Multi-Node Cluster
+
+Consists of at least two compute nodes.
+Best suited for large datasets and production environments.
+
+Leader Node
+Compute Node    Compute Node
