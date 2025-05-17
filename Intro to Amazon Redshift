@@ -36,3 +36,4 @@ Compute node
 
 Single-Node Cluster
 Consists of one compute node.
+Best suited for small datasets and testing purposes.
