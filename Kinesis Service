@@ -67,6 +67,7 @@ Kinesis:
 Stores records by default for 24 hours up to 7 days
 Supports multiple consumers of the same data records
 Supports in-order processing with a shard however no kind of ordering between shards is guaranteed
+Related records can be routed to the same record processor
 
 Update: AWS Kinesis Data Streams has a default retention period of 24 hours. Using the 7 day retention option is good for helping to resolve downstream data issues. Long-term retention can be up to 365 days.
 SQS:
@@ -74,3 +75,4 @@ SQS:
 Message retention period can be between 1 minute to 14 days
 Only a single consumer at a time, once its read its deleted from the queue
 Standard SQS queues don't guarantee in-order processing but FIFO support it with limitations
+Does not support routing
