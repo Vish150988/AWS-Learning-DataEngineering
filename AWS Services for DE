@@ -61,3 +61,9 @@ Fully managed service
 Allows for the integration of large amounts of data to multiple services
 Allows you to consume process and buffer data in real time
 Allows for real-time metrics and reporting across various services
+
+AWS Glue: Event-Driven Triggers
+Event-Driven
+With event-driven triggers, you can configure AWS glue workflows to start automatically in response to events
+Events are things like data uploads to S3, changes in Amazon DynamoDB tables, or messages in Amazon Simple Notification Service (SNS) topics
+These can also come from an EventBridge
