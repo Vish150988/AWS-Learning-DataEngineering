@@ -39,4 +39,7 @@ S3
 Redshift
 Third-party software
 
-
+Amazon Kinesis: Data Firehose
+Delivery Stream
+Allows you to send data from AWS services or third-party services
+Allows you to store data or to send it to services to process the data
