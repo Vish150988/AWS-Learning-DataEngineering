@@ -43,3 +43,8 @@ Amazon Kinesis: Data Firehose
 Delivery Stream
 Allows you to send data from AWS services or third-party services
 Allows you to store data or to send it to services to process the data
+
+Amazon Kinesis: Managed Service for Apache Flink (Data Analytics)
+Managed Service for Apache Flink
+Allows you to use programming languages or SQL to process your data
+Allows you to use notebooks to run commands against your data
