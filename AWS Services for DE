@@ -24,4 +24,16 @@ Data Catalog simplifies the management of metadata for your data assets.
 2. Active table definition including column names , Data types, and other attributes
 3. Automatically infer the schema of the database.
 
+AWS Glue : Glue Studio
+AWS Glue Studio simplifies the development and management of ETL workflows by providing a visual interface, built-in transforms, and seamless integration with AWS Glue ETL for scalable data processing in the cloud.
 
+1.A way to visually write an ETL job
+2.For example, it allows you to drag and drop functions to build transformation logic
+3.Enables job orchestration and monitoring
+4.Allows you to create ETL jobs and pipelines, scheduling them to run at specified intervals or in response to triggers such as data arrival or events.
+
+AWS Glue : DataBrew
+AWS DataBrew is a visual data preparation tool that allows you to use programming languages or SQL to process your data
+
+1.Allows for visual data preparations to explore and interact with your datasets
+2.Provides a wide range of built-in data transformation functions to apply datasets
