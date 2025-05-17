@@ -14,3 +14,9 @@ Semi-structured data
 Runs within a VPC.
 Redshift supports Multi-AZ deployments.
 Offers a serverless option.
+
+Amazon Redshift
+Redshift allows you to collect data through traditional data warehouses
+Data Warehousing allows you to combine different data sources into a single place to run custom analytics
+Redshift also allows you to utilize log analysis
+Log analysis allows you to get insightful data on user behaviors like how many times they click and what sensors they use.
