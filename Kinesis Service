@@ -54,3 +54,9 @@ Anomaly detection in IoT
 Log Processing for machine learning
 Pattern detection
 Click Stream Analysis
+
+Benefits of Kinesis
+Fully managed service
+Serverless
+Allows you to capture streaming data in near real-time
+Built-in Autoscaling
