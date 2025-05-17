@@ -5,3 +5,18 @@ Kinesis
 2.Kinesis is a family of services that consists of Data Streams, Data Firehose, Video Streams and Managed Apache Flink
 3.These services aid in the collection, delivery, and analytics of streaming data
 4.They are able to interact with AWS and third-party services with low effort
+
+What is Kinesis Data Streams?
+
+Serverless way to stream and store data
+
+Each Stream is composed of a sequence of Shards containing data records
+A data record contains a sequence number, partition key, and a data blob up to 1 MB
+
+There are two sides of a stream:
+a.Data Producers
+b.Data Consumers
+A Producer is an application that ingests incoming data into a Stream in near real-time
+A Consumer is an application that takes that collected data and processes or stores it
+
+
