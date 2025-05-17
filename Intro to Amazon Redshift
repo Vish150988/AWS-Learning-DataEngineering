@@ -20,3 +20,19 @@ Redshift allows you to collect data through traditional data warehouses
 Data Warehousing allows you to combine different data sources into a single place to run custom analytics
 Redshift also allows you to utilize log analysis
 Log analysis allows you to get insightful data on user behaviors like how many times they click and what sensors they use.
+
+Redshift Architecture:
+Single-Node Cluster
+Leader Node
+Compute Node
+Redshift uses a cluster architecture.
+
+Each cluster is composed of computing resources called nodes.
+You can have up to 128 compute nodes.
+Two types of nodes:
+
+Leader node
+Compute node
+
+Single-Node Cluster
+Consists of one compute node.
