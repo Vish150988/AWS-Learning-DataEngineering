@@ -76,3 +76,16 @@ Message retention period can be between 1 minute to 14 days
 Only a single consumer at a time, once its read its deleted from the queue
 Standard SQS queues don't guarantee in-order processing but FIFO support it with limitations
 Does not support routing
+
+Kinesis vs Kafka
+Kinesis:
+
+Configurability is limited in how it writes data to end resources
+Is cloud native and pay-as-you-go meaning lower costs
+Designed for easy use, implementation is only a few clicks away!
+
+Kafka:
+
+Kafka is more configurable in how it writes data
+Requires more active engineering hours to get started which leads to higher overall cost
+Requires more heavy lifting for implementation, use, and maintenance
