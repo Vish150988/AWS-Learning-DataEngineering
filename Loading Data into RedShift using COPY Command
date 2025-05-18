@@ -42,7 +42,19 @@ What permissions to use
 
 
 
-UNLOAD Command
+UNLOAD Command:
+Unloading Data from Redshift: Anatomy of the UNLOAD Command:
+
+UNLOAD ('SELECT * FROM my_table')
+TO "s3://my_bucket/table_unloads"
+iam_role 'arn:aws:iam::1234567890:role/my_spectrum_role'
+FORMAT PARQUET;
+The image shows the UNLOAD command structure for exporting data from Redshift to S3. It includes:
+
+The UNLOAD command with a SQL query to select data ('SELECT * FROM my_table')
+The destination S3 bucket path ("s3://my_bucket/table_unloads")
+The IAM role needed for permissions (arn:aws:iam::1234567890:role/my_spectrum_role)
+The format specification (PARQUET) for the exported data
 
 Sends data from Redshift to S3
 Needs to know:
