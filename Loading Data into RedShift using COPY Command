@@ -2,3 +2,62 @@
 Copy my_table
 from "s3://my_bucket/my_tables/table_1.txt"
 iam_role 'arn:aws:iam::1234567890:role/my_spectrum_role'
+
+How to Load Data into AWS Redshift
+Where Data Can Come From
+You can load data into Redshift from many AWS services like:
+
+S3
+Kinesis
+EMR
+DynamoDB
+DMS
+RDS
+
+Two Ways to Load Data
+Option 1: Using S3 as Middle Step
+
+Start with a Redshift cluster
+Split your files into multiple pieces for faster parallel loading
+Upload files to S3
+Create an IAM role with permission to read from S3
+Connect the role to your Redshift cluster
+Use COPY command to bring data from S3 into Redshift
+
+Option 2: Direct Loading
+
+Load straight from your source (like DynamoDB) into Redshift
+Skip the S3 step
+Faster but you don't have a backup copy in S3
+
+Important Commands
+COPY Command
+
+Brings data into Redshift
+Needs to know:
+
+Where to put the data in Redshift
+Where the data is coming from
+What permissions to use
+
+
+
+UNLOAD Command
+
+Sends data from Redshift to S3
+Needs to know:
+
+What data to export
+Where to put it in S3
+What format to save it in (like PARQUET)
+
+
+
+VACUUM Command
+Keeps your database clean and efficient:
+
+VACUUM FULL: Cleans up space completely (takes longer)
+VACUUM SORT: Makes sure data is in the right order
+VACUUM REINDEX: Makes your database work better and saves space
+
+These commands help your Redshift cluster run smoothly.RetryClaude can make mistakes. Please double-check responses. 3.7 Sonnet
