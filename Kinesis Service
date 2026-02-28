@@ -1,91 +1,115 @@
-Amazon Kinesis: What is it?
+# Amazon Kinesis
 
-Kinesis
-1.Fully managed data streaming service that allows you process and analyze streaming data
-2.Kinesis is a family of services that consists of Data Streams, Data Firehose, Video Streams and Managed Apache Flink
-3.These services aid in the collection, delivery, and analytics of streaming data
-4.They are able to interact with AWS and third-party services with low effort
+## What is Kinesis?
 
-What is Kinesis Data Streams?
+Amazon Kinesis is a **fully managed data streaming service** that allows you to process and analyze streaming data in real time.
 
-Serverless way to stream and store data
+Kinesis is a **family of services** consisting of:
 
-Each Stream is composed of a sequence of Shards containing data records
-A data record contains a sequence number, partition key, and a data blob up to 1 MB
+- **Kinesis Data Streams** — stream and store data
+- **Kinesis Data Firehose** — deliver data to storage or processing services
+- **Kinesis Video Streams** — stream video from connected devices
+- **Managed Service for Apache Flink** — process data using code or SQL
 
-There are two sides of a stream:
-a.Data Producers
-b.Data Consumers
-A Producer is an application that ingests incoming data into a Stream in near real-time
-A Consumer is an application that takes that collected data and processes or stores it
+These services aid in the **collection, delivery, and analytics** of streaming data, and integrate with both AWS and third-party services with minimal effort.
 
-Architecture: Data Flow
-Data Producer → Kinesis → Data Consumer
-Data Producer:
+---
 
-IoT devices
-Log/Event generators
-External applications
-Servers or container
+## Kinesis Data Streams
 
-Kinesis:
+A **serverless** way to stream and store data.
 
-Data Stream
-Data Firehose
+### Core Concepts
 
-Data Consumer:
+| Concept | Description |
+|---|---|
+| **Stream** | A sequence of ordered **Shards** |
+| **Shard** | A container holding data records |
+| **Data Record** | Contains a sequence number, partition key, and a data blob (up to **1 MB**) |
 
-S3
-Redshift
-Third-party software
+### Two Sides of a Stream
 
-Amazon Kinesis: Data Firehose
-Delivery Stream
-Allows you to send data from AWS services or third-party services
-Allows you to store data or to send it to services to process the data
+**Data Producers** — Applications that ingest incoming data into a stream in near real-time.
 
-Amazon Kinesis: Managed Service for Apache Flink (Data Analytics)
-Managed Service for Apache Flink
-Allows you to use programming languages or SQL to process your data
-Allows you to use notebooks to run commands against your data
+**Data Consumers** — Applications that take the collected data and process or store it.
 
-Amazon Kinesis: Use Cases
-Anomaly detection in IoT
-Log Processing for machine learning
-Pattern detection
-Click Stream Analysis
+---
 
-Benefits of Kinesis
-Fully managed service
-Serverless
-Allows you to capture streaming data in near real-time
-Built-in Autoscaling
+## Architecture: Data Flow
 
-Kinesis vs SQS
-Kinesis:
+```
+Data Producer  →  Kinesis  →  Data Consumer
+```
 
-Stores records by default for 24 hours up to 7 days
-Supports multiple consumers of the same data records
-Supports in-order processing with a shard however no kind of ordering between shards is guaranteed
-Related records can be routed to the same record processor
+### Data Producers
+- IoT devices
+- Log / event generators
+- External applications
+- Servers or containers
 
-Update: AWS Kinesis Data Streams has a default retention period of 24 hours. Using the 7 day retention option is good for helping to resolve downstream data issues. Long-term retention can be up to 365 days.
-SQS:
+### Kinesis (Processing Layer)
+- Kinesis Data Streams
+- Kinesis Data Firehose
 
-Message retention period can be between 1 minute to 14 days
-Only a single consumer at a time, once its read its deleted from the queue
-Standard SQS queues don't guarantee in-order processing but FIFO support it with limitations
-Does not support routing
+### Data Consumers
+- Amazon S3
+- Amazon Redshift
+- Third-party software
 
-Kinesis vs Kafka
-Kinesis:
+---
 
-Configurability is limited in how it writes data to end resources
-Is cloud native and pay-as-you-go meaning lower costs
-Designed for easy use, implementation is only a few clicks away!
+## Kinesis Data Firehose
 
-Kafka:
+A **Delivery Stream** service that:
 
-Kafka is more configurable in how it writes data
-Requires more active engineering hours to get started which leads to higher overall cost
-Requires more heavy lifting for implementation, use, and maintenance
+- Allows you to send data from AWS services or third-party services
+- Lets you store data or send it to other services for further processing
+
+---
+
+## Managed Service for Apache Flink (Data Analytics)
+
+- Use **programming languages or SQL** to process your streaming data
+- Use **notebooks** to run interactive commands against your data
+
+---
+
+## Use Cases
+
+- 🔍 Anomaly detection in IoT
+- 📋 Log processing for machine learning
+- 🔎 Pattern detection
+- 🖱️ Click stream analysis
+
+---
+
+## Benefits of Kinesis
+
+- ✅ Fully managed service
+- ✅ Serverless — no infrastructure to manage
+- ✅ Captures streaming data in **near real-time**
+- ✅ Built-in **auto-scaling**
+
+---
+
+## Kinesis vs SQS
+
+| Feature | Kinesis | SQS |
+|---|---|---|
+| **Data Retention** | 24 hours (default) up to **365 days** | 1 minute to **14 days** |
+| **Consumers** | Supports **multiple consumers** of the same records | **Single consumer** — message is deleted after reading |
+| **Ordering** | In-order within a shard; no cross-shard ordering guarantee | Standard: no guarantee; **FIFO: ordered** (with limitations) |
+| **Routing** | Related records can be routed to the **same processor** | Does not support routing |
+
+> **Note:** AWS Kinesis Data Streams has a default retention period of **24 hours**. The 7-day retention option helps resolve downstream data issues. Long-term retention can be extended up to **365 days**.
+
+---
+
+## Kinesis vs Kafka
+
+| Feature | Kinesis | Kafka |
+|---|---|---|
+| **Configurability** | Limited — simpler write configuration | Highly configurable for data delivery |
+| **Cost Model** | Cloud-native, **pay-as-you-go** — lower operational cost | Requires more engineering hours — higher overall cost |
+| **Implementation** | Easy — setup in a **few clicks** | Heavy lifting required for setup, use, and maintenance |
+| **Hosting** | Fully managed by AWS | Self-managed (or managed via Confluent, MSK, etc.) |
